@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+/* Style for active menu item */
+.menu a.active {
+    color: black; /* Change text color when active */
+    background-color: #ffcc00; /* Yellow background for active link */
+    box-shadow: 0px 0px 15px rgba(255, 204, 0, 0.8); /* Add a glowing effect */
+    transform: scale(1.1); /* Make the active item slightly larger */
+    text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 30px #ffcc00, 0 0 40px #ffcc00; /* Neon Glow */
+}
+
+.banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    min-height: 20px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+}
+
+.menu li {
+    display: inline;
+    
+}
+
+.banner {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    min-height: 20px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #ffcc00;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    padding: 10px 15px;
+    border-radius: 10px;
+    text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 30px #ffcc00, 0 0 40px #ffcc00; /* Neon Glow */
+}
+
+.menu a:hover {
+    color: black;
+    background-color: #ffcc00;
+    box-shadow: 0px 0px 15px rgba(255, 204, 0, 0.8);
+    transform: scale(1.1);
+    text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 30px #ffcc00, 0 0 40px #ffcc00; /* Enhanced Neon Glow on Hover */
+}

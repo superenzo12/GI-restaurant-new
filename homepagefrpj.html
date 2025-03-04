@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Cards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .video-cards-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        .video-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            position: relative;
+            transition: transform 0.3s ease;
+            padding: 10px;
+        }
+
+        .video-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .video-card h3 {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            margin: 0;
+        }
+
+        .video-card:hover {
+            transform: scale(1.05);
+        }
+
+        /* Fullscreen styling */
+        .video-card iframe {
+            display: none;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Make the iframe visible on hover */
+        .video-card:hover iframe {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Hide all cards except the active one */
+        .video-cards-container .video-card:not(:hover) {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="video-cards-container">
+        <div class="video-card">
+            <img src="https://img.youtube.com/vi/ZQM7Iy9paj8/0.jpg" alt="Video 1">
+            <h3>Video 1</h3>
+            <iframe src="https://www.youtube.com/embed/ZQM7Iy9paj8" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+
+        <div class="video-card">
+            <img src="https://img.youtube.com/vi/daLiRzjBSo0/0.jpg" alt="Video 2">
+            <h3>Video 2</h3>
+            <iframe src="https://www.youtube.com/embed/daLiRzjBSo0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+
+        <div class="video-card">
+            <img src="https://img.youtube.com/vi/YbJOTdZBX1g/0.jpg" alt="Video 3">
+            <h3>Video 3</h3>
+            <iframe src="https://www.youtube.com/embed/YbJOTdZBX1g" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+
+        <div class="video-card">
+            <img src="https://img.youtube.com/vi/ZN_vKJ88IMs/0.jpg" alt="Video 4">
+            <h3>Video 4</h3>
+            <iframe src="https://www.youtube.com/embed/ZN_vKJ88IMs" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+
+        <div class="video-card">
+            <img src="https://img.youtube.com/vi/C0DPdy98e4c/0.jpg" alt="Video 5">
+            <h3>Video 5</h3>
+            <iframe src="https://www.youtube.com/embed/C0DPdy98e4c" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+
+        <div class="video-card">
+            <img src="https://img.youtube.com/vi/3JZ_D3ELwOQ/0.jpg" alt="Video 6">
+            <h3>Video 6</h3>
+            <iframe src="https://www.youtube.com/embed/3JZ_D3ELwOQ" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+    </div>
+
+</body>
+
+</html>
